@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      width: 100vw;
+      height: 100vh;
+      background-color: blueviolet;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+    .message-blog{
+      display: flex;
+      flex-direction: line;
+      justify-content: center;
+      align-items:last baseline;
+      width: 100%;
+      height: 60%;
+    }
+    .code{
+      font-size: 1000%;
+      padding: 20px;
+    }
+    .back, a{
+      text-align: center;
+      color: white;
+      width: 100%;
+      height: 20%;
+    }
+    .footer{
+      text-align: center;
+      width: 100%;
+      height: 10%;
+    }
+    @media  ( max-width: 800px) {
+      .message-blog{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 60%;
+      h1{
+        text-align: center;
+      }
+      .code{
+      font-size: 1000%;
+      padding: 0px;
+    }
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="message-blog">
+      <div class="code">
+        404
+      </div>
+      <div class="message">
+        <h1>Desolé !</h1>
+        <p>cette page n'est pas disponible.</p>
+      </div>
+    </div>
+    <div class="back">
+      <a href="./">Retour à la page d'acceuil</a>
+    </div>
+    <div class="footer">
+        Copyright © 2024 All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
