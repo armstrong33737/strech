@@ -27,6 +27,7 @@ function updateForm(formulaire, forfait,montant, prixPaypal, del){
 			return actions.order.capture().then(function(details){
 				paiemaent = 1;
 				delais = del;
+                valider();
 				alert ("Transaction ok:"+details.payer.name.given_name);
 			})
 		},
