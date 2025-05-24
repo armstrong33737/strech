@@ -41,7 +41,7 @@ function updateForm(formulaire, forfait,montant, prixPaypal, del){
 
 function valider(){
 	form = document.forms['formPrice'];
-	if (form.nom.value != "" & form.email.value != "" & form.secteur.value != "" & paiemaent != 1 ){
+	if (form.nom.value != "" & form.email.value != "" & form.secteur.value != "" & paiemaent == 1 ){
 		document.getElementById('commander').disabled = false;
 	}else {
 		document.getElementById('commander').disabled = true;
@@ -57,8 +57,8 @@ document.getElementById("commander").addEventListener('click', function(){
 	var templateParams = {
 		title: "Strech Nouvelle commade",
 		name: form.nom.value,
-        sacteur: form.secteur.value,
-        couleurs: form.couleurs.value,
+        secteur: form.secteur.value,
+        couleur: form.couleurs.value,
         type: form.type.value,
 		message: form.description.value,
 		email: form.email.value,

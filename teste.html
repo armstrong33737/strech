@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -10,42 +10,59 @@
   <button onclick="traduire()">Traduire</button>
 
   <script>
-    async function traduireEnFrancais(texte) {
-      const res = await fetch("https://libretranslate.de/translate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          q: texte,
-          source: "auto",
-          target: "fr",
-          format: "text"
-        })
-      });
+    async function translateText(text, targetLanguage = 'fr') {
+    const sourceLang = 'auto'; // Détection automatique de la langue source
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLang}&tl=${targetLanguage}&dt=t&q=${encodeURIComponent(text)}`;
 
-      if (!res.ok) {
-        throw new Error("Erreur réseau ou API");
-      }
-
-      const data = await res.json();
-      return data.translatedText;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        // L'API retourne un tableau complexe, la traduction est dans data[0][0][0]
+        if (data && data[0] && data[0][0] && data[0][0][0]) {
+            return data[0][0][0];
+        } else {
+            throw new Error('Format de réponse inattendu de l\'API');
+        }
+    } catch (error) {
+        console.error('Erreur de traduction:', error);
+        return text; // Retourne le texte original en cas d'erreur
     }
+}
 
-    function traduire() {
-      const mot = document.getElementById("texte").value.trim();
-      if (!mot) {
-        alert("Tape un mot à traduire !");
-        return;
-      }
-
-      traduireEnFrancais(mot)
-        .then(traduction => alert("Traduction : " + traduction))
-        .catch(error => {
-          console.error("Erreur : ", error);
-          alert("Échec de la traduction.");
-        });
-    }
+// Exemple d'utilisation
+translateText('what is you name ?', 'fr')
+    .then(translation => console.log(translation))
+    .catch(error => console.error(error));
   </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Envoi d'email avec SMTPJS</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <button onclick="sendEmail()">Envoyer un email</button>
+
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com", // Serveur SMTP (ex: Gmail, Outlook, etc.)
+                Username: "armstrongngaleu3@gmail.com", // Votre adresse email
+                Password: "(armstrong3)", // Mot de passe ou "App Password"
+                To: "armstrongngaleu32@gmail.com",
+                From: "armstrongngaleu32@gmail.com",
+                Subject: "Test SMTPJS",
+                Body: "Ceci est un test d'envoi depuis SMTPJS !"
+            }).then(
+                message => alert("Email envoyé avec succès !")
+            ).catch(
+                error => alert("Erreur : " + error)
+            );
+        }
+    </script>
 </body>
 </html>
