@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Traduction en français</title>
+</head>
+<body>
+  <h2>Traduis un mot en français :</h2>
+  <input type="text" id="texte" placeholder="Tape un mot ou une phrase">
+  <button onclick="traduire()">Traduire</button>
+
+  <script>
+    async function traduireEnFrancais(texte) {
+      const res = await fetch("https://libretranslate.de/translate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          q: texte,
+          source: "auto",
+          target: "fr",
+          format: "text"
+        })
+      });
+
+      if (!res.ok) {
+        throw new Error("Erreur réseau ou API");
+      }
+
+      const data = await res.json();
+      return data.translatedText;
+    }
+
+    function traduire() {
+      const mot = document.getElementById("texte").value.trim();
+      if (!mot) {
+        alert("Tape un mot à traduire !");
+        return;
+      }
+
+      traduireEnFrancais(mot)
+        .then(traduction => alert("Traduction : " + traduction))
+        .catch(error => {
+          console.error("Erreur : ", error);
+          alert("Échec de la traduction.");
+        });
+    }
+  </script>
+</body>
+</html>

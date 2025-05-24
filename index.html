@@ -5,11 +5,12 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="création de logo créer un logo faire un logo concevoir un logo générateur de logo outil de logo éditeur de logo design de logo logo en ligne logo gratuit logo professionnel logo personnalisé logo entreprise logo marque logo sur mesure logo vectoriel logo moderne logo créatif logo original logo pas cher logo freelance logo startup logo pour boutique logo site web logo typographique logo intelligent logo IA logo HD logo premium identité visuelle image de marque emblème visuel graphique graphisme application logo plateforme logo outil de design outil de création application de création application graphique logo simple logo esthétique logo élégant logo innovant logo pour artisan logo pour coach logo pour photographe logo pour blogueur logo pour youtubeur logo pour influenceur logo pour commerce logo pour restaurant logo automatique logo instantané logo rapide logo facile logo haute résolution
+    ">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
-    <link rel="shortcut icon" href="assets/images/icon-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="styless.css">
+    <link rel="shortcut icon" href="favicon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styless.css">
     <title>Strech</title>
 
     <!-- Additional CSS Files -->
@@ -23,12 +24,10 @@
     <link rel="stylesheet" href="assets/css/template.css">
 
     <script 
-
-    src="https://www.paypal.com/sdk/js?client-id=AZL4RJS_hDhyG1HgOMHCsjhrO7GZXAjoasOmXLlGnyBZL0NXT2dI50CJFXkrBJgFOSetTzrtZYQM-nsP&currency=EUR">
-
+        src="https://www.paypal.com/sdk/js?client-id=AZL4RJS_hDhyG1HgOMHCsjhrO7GZXAjoasOmXLlGnyBZL0NXT2dI50CJFXkrBJgFOSetTzrtZYQM-nsP&currency=EUR">
     </script>
 
-    </head>
+</head>
     
     <body>
     
@@ -51,7 +50,7 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="#" class="logo">
-                            <img src="assets/images/icon-logo.png" style="width: 105px; height: 35px;" alt="Strech"><strong style="color: rgb(68, 20, 199);">str</strong><strong style="color: rgb(193, 27, 226);">ech</strong>
+                            <img src="logo.jpg" style="width: 120px; height: 40px;" alt="Strech">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -437,7 +436,7 @@
                             </ul>
                         </div>
                         <div class="pricing-footer">
-                            <a href="#" class="main-button" data-toggle="modal" data-target="#price" >Commander maintenant</a>
+                            <a href="#" class="main-button" data-toggle="modal" onclick="updateForm('formPrice','Standard: ', '140.00 €','140.00','48H')" data-target="#formPrice" >Commander maintenant</a>
                         </div>
                     </div>
                 </div>
@@ -447,7 +446,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
                     <div class="pricing-item active">
                         <div class="pricing-header">
-                            <h3 class="pricing-title">Premium</h3>
+                            <h3 class="pricing-title">Avancé</h3>
                         </div>
                         <div class="pricing-body">
                             <div class="price-wrapper">
@@ -465,7 +464,7 @@
                             </ul>
                         </div>
                         <div class="pricing-footer">
-                            <a href="#" class="main-button" data-toggle="modal" data-target="#price2" >Commander maintenant</a>
+                            <a href="#" class="main-button" data-toggle="modal" onclick="updateForm('formPrice','Avancé: ', '180.00 €','180.00','48H')" data-target="#formPrice" >Commander maintenant</a>
                         </div>
                     </div>
                 </div>
@@ -475,7 +474,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
                     <div class="pricing-item">
                         <div class="pricing-header">
-                            <h3 class="pricing-title">Avancé</h3>
+                            <h3 class="pricing-title">Premium</h3>
                         </div>
                         <div class="pricing-body">
                             <div class="price-wrapper">
@@ -493,7 +492,7 @@
                             </ul>
                         </div>
                         <div class="pricing-footer">
-                            <a href="#" class="main-button" data-toggle="modal" data-target="#price3" >Commander maintenant</a>
+                            <a href="#" class="main-button" data-toggle="modal" onclick="updateForm('formPrice','Premium: ','200.00 €','200.00','paypal-button-container1','48H')" data-target="#formPrice" >Commander maintenant</a>
                         </div>
                     </div>
                 </div>
@@ -504,66 +503,67 @@
     <!-- ***** Pricing Plans End ***** -->
 
      <!-- Modal -->
-     <form action="#" class="modal fade" id="price" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+     <form action="#" method="post" class="modal fade" id="formPrice" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                    <div class="modal-header">
-                            <h5 class="modal-title">Souscrit à l'offre</h5>
+                    <div class="modal-header ">
+                            <h5 class="modal-title"><span id="titleForm"></span> <strong style="color: green;" id="amountForm" ></strong></h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                         </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <div class="col-lg-12 text-lg-right ">
-                            <fieldset>
-                                <h4>Offre standard: <strong style="color: green;" >140.00 €</strong></h4>
-                           </fieldset>
-                        </div>
-                        
                         <div class="col-lg-12">
                             <fieldset>
-                                <label for="nom">Nom:*</label>
-                                <input type="text" name="nom" class="form-control" placeholder="Entrer votre nom"><br>
+                                <input type="text" name="nom" class="form-control" oninput="valider()" placeholder="Entrer votre nom"required><br>
                             </fieldset>
                         </div>
                         <div class="col-lg-12">
                             <fieldset>
-                                <label for="email">Email:*</label>
-                                <input type="email" name="nom" class="form-control" placeholder="Entrer votre adresse e-mail"><br>
+                                <input type="email" name="email" class="form-control" oninput="valider()" placeholder="Entrer votre adresse e-mail"required ><br>
                             </fieldset>
                         </div>
                         <div class="col-lg-12">
                             <fieldset>
-                                <label for="secteur">Secteur d'activite:</label>
-                                <select name="secteur" class="form-control" id="">
+                                <select name="secteur" class="form-control" onchange="valider()" required id="">
                                     <option value="" disabled selected>Choisir votre secteur d'activité</option>
                                     <option value="informatique">informatique</option>
                                     <option value="patisserie">Patisserie</option>
                                     <option value="E-commerce">E-commerce</option>
                                     <option value="Education">Education</option>
+                                    <!-- liste de secteur d'activite -->
                                 </select><br>
                             </fieldset>
                         </div>
                         <div class="col-lg-12">
                             <fieldset>
-                                <label for="preference">Preference:</label>
-                                <select name="preference" class="form-control" id="">
-                                    <option value="" disabled selected>Choisir votre type de logo</option>
-                                    <option value="minimaliste">minimaliste</option>
-                                    <option value="complexe">complexe</option>
-                                </select><br>
+                                <input type="text" name="couleurs" class="form-control" placeholder="Entrer vos couleurs preferées"><br>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-12">
+                            <fieldset style="display: flex; justify-content: space-around; flex-direction: line;" >
+                                <span>
+                                    <input type="radio" name="type" value="simple" checked> Style simple 
+                                </span>
+                                <span>
+                                     <input type="radio" name="type"  value="complexe" > Style complexe
+                                </span>
+                           </fieldset><br>
+                        </div>
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <textarea name="description" class="form-control" placeholder="Description suplementaire" name="" id=""></textarea><br>
                             </fieldset>
                         </div>
                         <div class="col-lg-12">
                             <fieldset>
-                                <label for="couleurs">Couleurs:</label>
-                                <input type="text" name="couleur" class="form-control" placeholder="Entrer vos couleurs preferées (séparées par des virgules)"><br>
+                                <div id="paypal-button-container" ></div>
                             </fieldset>
                         </div>
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 d-flex justify-content-center">
                             <fieldset>
-                                <div id="paypal-button-container"></div>
+                                <button type="button" id="commander" class="btn btn-primary " disabled >commander</button>
                             </fieldset>
                         </div>
                     </div>
@@ -574,42 +574,7 @@
             </div>
         </div>
     </form>
-    <form action="#" class="modal fade" id="price2" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-        
-    </form>
-    <form action="#" class="modal fade" id="price3" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-        
-    </form>
      
-     <script>
-        $('#exampleModal').on('show.bs.modal', event => {
-            var button = $(event.relatedTarget);
-            var modal = $(this);
-        });
-     </script>
-     <script>
-        paypal.Buttons({
-            createOrder: function(data, actions){
-                return actions.order.create({
-                    purchase_units:[{
-                        amount:{
-                            value:'30.00'
-                        },
-                        description: "pack standard"
-                    }]
-                });
-            },
-            onApprove: function(data, actions){
-                return actions.order.capture().then(function(details){
-                    alert ("Transaction ok:"+details.payer.name.given_name);
-                })
-            },
-            onError: function (err){
-                console.error("Payment error:",err);
-                alert("Paiemaent échoué !");
-            }
-        }).render("#paypal-button-container");
-    </script>
 
     <!-- ***** Blog Start ***** -->
     <section class="section" id="porfolio">
@@ -689,7 +654,7 @@
                 <!-- ***** Contact Form Start ***** -->
                 <div class="col-lg-8 col-md-6 col-sm-12">
                     <div class="contact-form">
-                        <form id="contact" action="#" method="get">
+                        <form id="contact" action="#" method="post">
                           <div class="row">
                             <div class="col-lg-6 col-md-12 col-sm-12">
                               <fieldset>
@@ -721,36 +686,11 @@
     </section>
     <!-- ***** Contact Us End ***** -->
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <script type="text/javascript"
+         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-     <script>
-        const form = document.forms["contact"];
-        
-        document.getElementById("contact").addEventListener("submit", function(e){
-            e.preventDefault();
-            (function () {
-            emailjs.init({
-                publicKey: "ZjG0GbvG3bmh8JjbS",
-            });
-            })();
-            var templateParams = {
-                title: "Strech Requette de logo",
-                name: form.name.value,
-                message: form.message.value,
-                email: form.email.value,
-            };
-            emailjs.send('service_zda99rr', 'template_7nhrdpk', templateParams).then(
-            (response) => {
-                alert("Votre requette a ete envoyer avec succes. nous vous contacterons pour ")
-            },
-            (error) => {
-                console.log('FAILED...', error);
-            },
-            );
-        });
-     </script>
 
-    <!-- ***** Footer Start ***** -->
+    
     <footer>
         <div class="container">
             <div class="row">
@@ -771,7 +711,7 @@
             </div>
         </div>
     </footer>
-    
+    <script src="assets/js/backend.js"></script>
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
 
@@ -787,7 +727,7 @@
     <script src="assets/js/imgfix.min.js"></script> 
     
     <!-- Global Init -->
-    <script src="assets/js/customs.js"></script>
+    <script src="assets/js/custom.js"></script>
 
   </body>
 </html>
